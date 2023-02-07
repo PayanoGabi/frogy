@@ -1,0 +1,42 @@
+body{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+#app{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#frog{
+    background-color: green;
+    height: 20px;
+    width: 30px;
+    margin: auto;
+}
+/* .game-container{
+    text-align: center;
+    background: #ddd;
+    margin: 20px;
+    display: inline-block;
+    height: 57%;
+    width: 63%;
+} */
+.container {  
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 1px solid;
+    width: 60%;
+    height: 40%;
+  }
+
+  .container div{
+        aspect-ratio: auto;
+  }
+  
+
+  

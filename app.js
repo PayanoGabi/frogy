@@ -4,7 +4,7 @@ const app = Vue.createApp({
     data(){
         return{
             showBook: true,
-            title: "Book Harry Potter : JK",
+            title: "Start",
             age:33,
             blob: "dsv",
             x:0,
@@ -18,26 +18,31 @@ const app = Vue.createApp({
         }
     },
     methods: {
+        thisBasic(){
+            const timeLeft = this.$el.querySelector("#time-left");
+            console.log(this.thisBasic)
+        }
         // changeTitle(title){
         //    // this.title = "The Spare"
         //    this.title = title
         // },
-        toggleBooks(){
-            this.showBook = !this.showBook
+        // toggleBooks(){
+        //     this.showBook = !this.showBook
 
-        },
-        handleEvent(e, data){
-            console.log(e, e.type)
-            if(data){
-                console.log(data)
-            }
-        },
-        handleMouse(e){
-            this.x = e.offsetX,
-            this.y = e.offsetY
+        // },
+        // handleEvent(e, data){
+        //     console.log(e, e.type)
+        //     if(data){
+        //         console.log(data)
+        //     }
+        // },
+        // handleMouse(e){
+        //     this.x = e.offsetX,
+        //     this.y = e.offsetY
 
-        }
+        // }
     }
+  
 })
 
 app.mount('#app')

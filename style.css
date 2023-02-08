@@ -38,5 +38,16 @@ body{
         aspect-ratio: auto;
   }
   
+  .startDiv{
+      background-color: coral;
+  }
 
-  
+  .endDiv{
+      background-color: darkcyan;
+  }
+  .left-log, .right-log{
+      background-color: cadetblue;
+  }
+  .right-car, .left-car{
+      background-color:thistle;
+  }

@@ -2,34 +2,36 @@ const timeLeft = document.querySelector('#time-left')
 const result = document.querySelector('#result')
 const playButton = document.querySelector('#play-btn')
 const squares = document.querySelectorAll('.container div')
-console.log(squares)
+var kermit = document.createElement('div')
+kermit.id = "kermit";
 let currentIndex = 76;
 const byNine = 9;
 
 function movingKermit(e){
-    console.log(e);
+    console.log(e.key);
 
     switch(e.key){
-
         case 'ArrowLeft': 
-            console.log(e)
             currentIndex -= 1;
+            console.log(e)
             break
         case 'ArrowRight': 
-            console.log(e)
             currentIndex += 1
+            console.log(e)
             break
         case 'ArrowUp': 
+            currentIndex -= byNine;
             console.log(e)
-            currentIndex += byNine;
             break
         case 'ArrowDown': 
+            currentIndex += byNine;
             console.log(e)
-            currentIndex -= byNine;
             break
     }
     console.log(squares[currentIndex])
     //squares[currentIndex].classList.add("kermit")
+    squares[currentIndex].appendChild(kermit)
+   
 }
 
 document.addEventListener('keyup',movingKermit)

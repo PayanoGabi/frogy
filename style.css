@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
 }
-#frog{
+.kermit{
     background-color: green;
     height: 20px;
     width: 30px;

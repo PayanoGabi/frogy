@@ -12,25 +12,26 @@ function movingKermit(e){
 
     switch(e.key){
         case 'ArrowLeft': 
-            currentIndex -= 1;
+            if(currentIndex % byNine !==0) currentIndex -= 1;
             console.log(e)
             break
         case 'ArrowRight': 
-            currentIndex += 1
+            if (currentIndex % byNine < byNine -1) currentIndex += 1;
             console.log(e)
             break
         case 'ArrowUp': 
-            currentIndex -= byNine;
+             if (currentIndex - byNine < squares.length &&  currentIndex - byNine >= 0) currentIndex -= byNine;
             console.log(e)
             break
         case 'ArrowDown': 
-            currentIndex += byNine;
+              if (currentIndex + byNine < squares.length && currentIndex + byNine > 0) currentIndex += byNine;
             console.log(e)
             break
     }
     console.log(squares[currentIndex])
     //squares[currentIndex].classList.add("kermit")
     squares[currentIndex].appendChild(kermit)
+
    
 }
 
